@@ -29,7 +29,7 @@ Requirements
 Role Variables
 --------------
 
-* packagenames
+* yapkg\_names
 
 Dependencies
 ------------
@@ -43,7 +43,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: zwischenloesung.yapkg, packagenames: [ foo, bar ] }
+         - { role: zwischenloesung.yapkg, yapkg_names: [ foo, bar ] }
 
 License
 -------
