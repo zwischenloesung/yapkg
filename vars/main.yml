@@ -1,2 +1,4 @@
 ---
 # vars file for yapkg
+yapkg_deb_names: '{{ yapkg_names }}'
+

@@ -8,6 +8,11 @@ Why we do not use one of the existing?
 * For the first reason read the section "Promise" below. We need something reliable.
 * This role will be used by [maestro](https://github.com/inofix/maestro) and must follow the logic used there. (Of course, the role can be used without maestro..)
 
+A note on the only mandatory variable: You need to tell what packages you want to get installed.
+The main variable is 'yapkg\_names' and takes a list of package names. As they might be called different
+on different distributions, you can distinguish between the targets as follows. Currently supported are:
+'yapkg\_deb\_names' (Debian).
+
 Promise
 -------
 
@@ -25,12 +30,13 @@ Requirements
 ------------
 
 * Ansible >2.0
-* playbook must provide a list (array) of packages to be installed 'yapkg\_names'
+* playbook must provide a list (array) of packages to be installed ('yapkg\_names', or 'yapkg\_deb\_names')
 
 Role Variables
 --------------
 
 * yapkg\_names (mandatory, array)
+ * yapkg\_deb\_names (alternative for packages unique to debian, used as soon as other targets will be supported)
 * yapkg\_update\_cache (optional, default: yes)
 * yapkg\_cache\_valid\_time (optional, default: 3600)
 * yapkg\_group\_name (optional, default: 'packages')

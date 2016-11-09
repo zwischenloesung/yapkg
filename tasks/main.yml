@@ -5,6 +5,6 @@
     name: '{{ item }}'
     update_cache: '{{ yapkg_update_cache }}'
     cache_valid_time: '{{ yapkg_cache_valid_time }}'
-  with_items: '{{ yapkg_names }}'
+  with_items: '{{ yapkg_deb_names }}'
   when: ansible_os_family == "Debian"
 
