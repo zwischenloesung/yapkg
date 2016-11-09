@@ -25,11 +25,15 @@ Requirements
 ------------
 
 * Ansible >2.0
+* playbook must provide a list (array) of packages to be installed 'yapkg\_names'
 
 Role Variables
 --------------
 
-* yapkg\_names
+* yapkg\_names (mandatory, array)
+* yapkg\_update\_cache (optional, default: yes)
+* yapkg\_cache\_valid\_time (optional, default: 3600)
+* yapkg\_group\_name (optional, default: 'packages')
 
 Dependencies
 ------------
