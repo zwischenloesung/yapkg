@@ -173,7 +173,7 @@ galaxy_info:
   galaxy_tags:
     - apt
     - installer:install
-    - manaage:manager
+    - manage:manager
     - package:packages:packaging
     - system
 
