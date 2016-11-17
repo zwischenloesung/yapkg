@@ -3,7 +3,7 @@ YAPKG
 
 This is Yet-Another-PacKaGe-installer role for ansible.
 
-Why we do not use one of the existing?
+Why we do not use one of the existing roles?
 
 * For the first reason read the section "Promise" below. We need something reliable.
 * This role will be used by [maestro](https://github.com/inofix/maestro) and must follow the logic used there. (Of course, the role can be used without maestro..)
@@ -30,16 +30,15 @@ Requirements
 ------------
 
 * Ansible >2.0
-* playbook must provide a list (array) of packages to be installed ('yapkg\_names', or 'yapkg\_deb\_names')
 
 Role Variables
 --------------
 
-* yapkg\_names (mandatory, array)
- * yapkg\_deb\_names (alternative for packages unique to debian, used as soon as other targets will be supported)
-* yapkg\_update\_cache (optional, default: yes)
-* yapkg\_cache\_valid\_time (optional, default: 3600)
-* yapkg\_group\_name (optional, default: 'packages')
+* yapkg\_names - mandatory, array
+ * yapkg\_deb\_names - alternative for packages unique to debian, used as soon as other targets will be supported
+* yapkg\_update\_cache - optional, default=yes
+* yapkg\_cache\_valid\_time - optional, default=3600
+* yapkg\_group\_name - optional, default='packages'
 
 Dependencies
 ------------
@@ -47,6 +46,7 @@ Dependencies
 * Currently only "Debian" is supported
 * It will test for the OS/Distro, namely
  * 'ansible\_os\_family'
+* playbook must provide a list (array) of packages to be installed ('yapkg\_names', or 'yapkg\_deb\_names')
 
 Example Playbook
 ----------------
